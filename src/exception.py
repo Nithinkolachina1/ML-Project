@@ -1,5 +1,10 @@
 import sys
-import logging
+import os
+
+sys.path.append(os.path.join(os.getcwd(), "src"))  # Assuming 'src' is in the current directory
+
+from logger import logging  # Import after modifying sys.path
+
 
 def error_message_detail(error,error_detail:sys):
     _,_,exc_tb=error_detail.exc_info()
